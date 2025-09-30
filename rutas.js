@@ -35,9 +35,30 @@ const rutas = [
 		url: "/tiendas",
 		handler: StoreControler.create,
 	},
+	{
+		method: "GET",
+		url: "/tiendas",
+		handler: StoreControler.getAll,
+	},
+	{
+		method: "GET",
+		url: "/tiendas/:id",
+		handler: StoreControler.getOne,
+	},
+	{
+		method: "PUT",
+		url: "/tiendas/:id",
+		handler: StoreControler.update,
+	},
+	{
+		method: "DELETE",
+		url: "/tiendas/:id",
+		handler: StoreControler.delete,
+	},
+
 
 	//Ruta de tikets
-		{
+	{
 		method: "POST",
 		url: "/ticket",
 		handler: TiketControler.create,
