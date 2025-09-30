@@ -1,16 +1,16 @@
-import  sequelize  from "sequelize";
+import sequelize from "sequelize";
 import db from '../db.js';
 import UserModel from "./Users.js";
 import StoreModel from "./Stores.js";
 
-const TicketModel = db.define('tikets' , {
+const TicketModel = db.define('tickets', {
 	id: {
 		type: sequelize.INTEGER,
 		autoIncrement: true,
 		primaryKey: true,
 		allowNull: false,
 	},
-	date_time : {
+	date_time: {
 		type: 'TIMESTAMP',
 		allowNull: false,
 	},
@@ -21,7 +21,8 @@ const TicketModel = db.define('tikets' , {
 	observation: {
 		type: sequelize.TEXT,
 		allowNull: false
-	}, end_date_time: {
+	},
+	end_date_time: {
 		type: 'TIMESTAMP',
 		allowNull: false,
 	}

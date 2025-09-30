@@ -60,8 +60,28 @@ const rutas = [
 	//Ruta de tikets
 	{
 		method: "POST",
-		url: "/ticket",
+		url: "/tickets",
 		handler: TiketControler.create,
+	},
+	{
+		method: "GET",
+		url: "/tickets",
+		handler: TiketControler.getAll,
+	},
+	{
+		method: "GET",
+		url: "/tickets/:id",
+		handler: TiketControler.getOne,
+	},
+	{
+		method: "PUT",
+		url: "/tickets/:id",
+		handler: TiketControler.update,
+	},
+	{
+		method: "DELETE",
+		url: "/tickets/:id",
+		handler: TiketControler.delete,
 	},
 ]
 

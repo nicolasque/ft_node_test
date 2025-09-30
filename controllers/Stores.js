@@ -43,7 +43,7 @@ class StoreControler {
 	async update(req, res) {
 		try {
 			const { id } = req.params;
-			const data = {...req.body};
+			const data = { ...req.body };
 
 			delete data.id;
 
@@ -61,12 +61,12 @@ class StoreControler {
 
 	async delete(req, res) {
 		try {
-			const {id} = req.params;
-			const storeModel = await StoreModel.destroy({where: {id}});
+			const { id } = req.params;
+			const storeModel = await StoreModel.destroy({ where: { id } });
 			if (storeModel)
-				res.status(200).send({status: true});
+				res.status(200).send({ status: true });
 			else
-					res.status(404).send({status: false} ,{message: "Registro no encontrado"});
+				res.status(404).send({ status: false }, { message: "Registro no encontrado" });
 		} catch {
 			res.status(500).send({ error: error });
 		}
