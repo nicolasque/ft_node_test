@@ -15,6 +15,7 @@ class TicketControler {
 			res.status(500).send({error: error});
 		}
 	}
+	
 }
 
 export default new TicketControler();

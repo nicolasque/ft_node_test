@@ -43,7 +43,7 @@ class StoreControler {
 	async update(req, res) {
 		try {
 			const { id } = req.params;
-			const data = req.body;
+			const data = {...req.body};
 
 			delete data.id;
 
