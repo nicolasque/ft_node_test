@@ -11,23 +11,22 @@ const rutas = [
 	{
 		method: "GET",
 		url: "/usuarios",
-		handler: async (req, res) => {
-			res.status(200).send({status: "OK - GET"});
-		}
+		handler: UserControler.getAll,
+	},
+	{
+		method: "GET",
+		url: "/usuarios/:id",
+		handler: UserControler.getOne,
 	},
 	{
 		method: "PUT",
-		url: "/usuarios",
-		handler: async (req, res) => {
-			res.status(200).send({status: "OK - PUT"});
-		}
+		url: "/usuarios/:id",
+		handler: UserControler.update,
 	},
 	{
 		method: "DELETE",
-		url: "/usuarios",
-		handler: async (req, res) => {
-			res.status(200).send({status: "OK - DELETE"});
-		}
+		url: "/usuarios/:id",
+		handler: UserControler.delete,
 	},
 
 	//Rutas de tiendas
