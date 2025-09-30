@@ -66,7 +66,7 @@ class StoreControler {
 			if (storeModel)
 				res.status(200).send({ status: true });
 			else
-				res.status(404).send({ status: false }, { message: "Registro no encontrado" });
+				res.status(404).send({ message: "Registro no encontrado" });
 		} catch {
 			res.status(500).send({ error: error });
 		}
